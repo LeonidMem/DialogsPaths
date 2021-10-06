@@ -1,0 +1,13 @@
+world: 'world'
+points:
+  - [4, 59, -29]
+  - [3, 60, -26]
+  - [0, 60, -21]
+rgb: [65, 241, 250]
+size: 1
+conditions:
+  beforeDialogs: ['dialog1', 'dialog2']
+  afterDialogs: 'dialog3'
+  beforeQuests: ['quest1']
+  afterQuests: 'quest2'
+  whenQuests: 'quest1'

@@ -1,0 +1,5 @@
+name: DialogsPaths
+main: ru.leonidm.dialogs.path.DialogsPaths
+version: 1.0
+author: LeonidM
+api-version: 1.13
