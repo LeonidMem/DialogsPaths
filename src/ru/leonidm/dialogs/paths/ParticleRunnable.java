@@ -2,7 +2,6 @@ package ru.leonidm.dialogs.paths;
 
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
-import org.jetbrains.annotations.NotNull;
 import ru.leonidm.dialogs.paths.entities.ConfigurablePath;
 
 import java.util.HashMap;
@@ -13,11 +12,11 @@ public class ParticleRunnable extends BukkitRunnable {
 
     private static final Map<Player, List<ConfigurablePath>> paths = new HashMap<>();
 
-    public static void addPlayer(@NotNull Player player, List<ConfigurablePath> paths) {
+    public static void addPlayer(Player player, List<ConfigurablePath> paths) {
         ParticleRunnable.paths.put(player, paths);
     }
 
-    public static void removePlayer(@NotNull Player player) {
+    public static void removePlayer(Player player) {
         paths.remove(player);
     }
 
