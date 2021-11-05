@@ -19,13 +19,8 @@ public class DialogsPaths extends JavaPlugin {
                 exampleFile.createNewFile();
                 InputStream is = getClass().getResourceAsStream("example.yml");
 
-                OutputStream os = new FileOutputStream("/plugins/DialogsM/paths/example.yml");
-
-                byte[] buffer = new byte[4096];
-                int length;
-                while ((length = is.read(buffer)) > 0) {
-                    os.write(buffer, 0, length);
-                }
+                OutputStream os = new FileOutputStream(exampleFile);
+                os.write(is.readAllBytes());
 
                 os.close();
                 is.close();

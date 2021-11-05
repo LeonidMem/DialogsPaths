@@ -6,10 +6,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
-import ru.leonidm.dialogs.api.events.DialogAddEvent;
-import ru.leonidm.dialogs.api.events.DialogRemoveEvent;
-import ru.leonidm.dialogs.api.events.DialogsReloadEvent;
-import ru.leonidm.dialogs.api.events.QuestStartEvent;
+import ru.leonidm.dialogs.api.events.*;
 import ru.leonidm.dialogs.paths.entities.ConfigurablePath;
 
 public class EventsHandler implements Listener {
@@ -31,12 +28,12 @@ public class EventsHandler implements Listener {
     }
 
     @EventHandler
-    public void onQuestAdd(DialogAddEvent e) {
+    public void onQuestAdd(QuestCompleteEvent e) {
         check(e.getOfflinePlayer());
     }
 
     @EventHandler
-    public void onQuestRemove(DialogRemoveEvent e) {
+    public void onQuestRemove(QuestRemoveEvent e) {
         check(e.getOfflinePlayer());
     }
 
